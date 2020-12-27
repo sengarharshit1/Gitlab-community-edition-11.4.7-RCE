@@ -1,4 +1,4 @@
-# Gitlab Community Edition 11.4.7 RCE
+# Gitlab 11.4.7 Authenticated RCE
 
 There is a minor mistake in https://www.exploit-db.com/exploits/49334
 
