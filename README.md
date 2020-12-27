@@ -2,7 +2,7 @@
 
 There is a minor mistake in https://www.exploit-db.com/exploits/49334
 
-Now, You can use rce.py to execute rce.
+Now, You can use rce.py to get reverse shell.
 
 ## Usage 
 
